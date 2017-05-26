@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FotoItem from './Foto';
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+import TimelineApi from '../logicas/TimelineApi';
 
 export default class Timeline extends Component {
 
@@ -11,8 +12,8 @@ export default class Timeline extends Component {
     }
 
     componentWillMount(){
-        this.props.store.subscribe(fotos=>{
-            this.setState({fotos});
+        this.props.store.subscribe(()=>{
+            this.setState({fotos:this.props.store.getState()});
         });
      
     }
@@ -24,7 +25,8 @@ export default class Timeline extends Component {
         } else {
             urlPerfil = `http://localhost:8080/api/public/fotos/${this.login}`;
         }
-       this.props.store.lista(urlPerfil);
+        TimelineApi.lista(urlPerfil, this.props.store);
+       //this.props.store.lista(urlPerfil);
     }
 
     componentDidMount(){
