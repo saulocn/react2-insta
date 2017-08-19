@@ -27,8 +27,7 @@ export function timeline(state=new List(), action){
 
       return trocaFoto(state, action.fotoId, fotoEstadoAntigo => {
         const likeada = !fotoEstadoAntigo.likeada;
-
-        const liker = action.liker;
+        
         const possivelLiker = fotoEstadoAntigo.likers.find(likerAtual => likerAtual.login === action.liker.login);
 
         let novosLikers;

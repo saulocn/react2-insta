@@ -4,7 +4,7 @@ Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 
-Para utilizar a API, deve-se utilizar o comando:
+Para utilizar a API, deve-se utilizar o comando:  
 
 java -jar -Dspring.datasource.password=SENHA_DO_DB instalura.jar
 
