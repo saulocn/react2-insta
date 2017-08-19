@@ -6,7 +6,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 Para utilizar a API, deve-se utilizar o comando:
 
-java -jar instalura.jar -Dspring.datasource.password=SENHA_DO_DB
+java -jar -Dspring.datasource.password=SENHA_DO_DB instalura.jar
 
 
 ## Table of Contents
